@@ -1,0 +1,146 @@
+.map {
+    width: 100%;
+    // height: 800px;
+
+    background: linear-gradient(180deg, rgba(0, 91, 187, 0.2) 0%, rgba(255, 213, 0, 0.2) 100%);
+
+    position: relative;
+}
+
+.map__legend {
+    padding: 30px;
+    max-width: 356px;
+
+    background: #F4F6F8;
+    border-radius: 0px 5px 0px 0px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.map__legend-tilte {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #D4D4D4;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2C2C2C;
+}
+
+.map__legend-list {}
+
+.map__legend-item {
+    padding-left: 32px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2C2C2C;
+
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 17px;
+        height: 17px;
+
+        border-radius: 5px;
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    &+& {
+        margin-top: 15px;
+    }
+
+    &--full {
+        &::before {
+            background: #1DD100;
+        }
+    }
+
+    &--partial {
+        &::before {
+            background: #EFE600;
+        }
+    }
+
+    &--refused {
+        &::before {
+            background: #FF7A00;
+        }
+    }
+}
+
+.map__filter {
+    position: absolute;
+    top: 48px;
+    right: 0;
+}
+
+.map__filter-title {
+    margin-bottom: 25px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 132.02%;
+    text-align: center;
+    color: #2C2C2C;
+}
+
+.map__list {}
+
+.map__list-item {
+    display: flex;
+    align-items: center;
+
+    background: #F4F6F8;
+    border-radius: 5px 0px 0px 5px;
+    overflow: hidden;
+
+    &+& {
+        margin-top: 12px;
+    }
+}
+
+.map__filter-item {
+    display: flex;
+    align-items: center;
+    width: 186px;
+    height: 50px;
+    padding: 6px 7px 6px 15px;
+
+    cursor: pointer;
+    transition: .2s linear;
+    border-right: 3px solid #FFD500;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2C2C2C;
+
+    &.active {
+        background: #005BBB;
+        color: #FFFFFF;
+    }
+
+    @media(min-width:1024px) {
+        &:hover {
+            background: #005BBB;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.map__icon {
+    margin-top: 15px;
+    max-width: 90%;
+    height:auto;
+}

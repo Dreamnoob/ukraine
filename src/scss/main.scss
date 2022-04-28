@@ -6,5 +6,9 @@
 @import "global";
 
 // подключения компонентов страницы
-/* @import "./components/header"; */
+@import "./components/header";
+@import "./components/breadcrumbs";
+@import "./components/map";
+
+@import "./components/footer";
 
