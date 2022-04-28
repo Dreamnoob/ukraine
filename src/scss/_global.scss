@@ -1,13 +1,17 @@
 * {
-	font-family: "GothamPro", sans-serif;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2C2C2C;
 }
 
 body {
-    background: #F4F9FE;
+    background: #fff;
 }
 
 .container {
-    max-width: 1130px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -19,18 +23,20 @@ body {
 
     &.scroll-hide {
         height: calc(var(--vh, 1vh) * 100);
-	}
+    }
 }
 
 .breadcrumbs {
     margin-bottom: 71px;
     position: relative;
     z-index: 5;
+
     &__list {
         &-item {
             display: inline-block;
             padding-right: 14px;
             position: relative;
+
             a,
             span {
                 font-weight: 400;
@@ -39,15 +45,19 @@ body {
                 color: #FFFFFF;
                 transition: all .3s;
             }
+
             a {
                 text-decoration-line: underline;
+
                 &:hover {
                     text-shadow: 0 0 .5px #FFFFFF;
                 }
             }
+
             &:last-child::after {
                 display: none;
             }
+
             &::after {
                 position: absolute;
                 content: '>';
@@ -62,4 +72,3 @@ body {
         }
     }
 }
-
