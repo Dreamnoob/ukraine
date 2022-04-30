@@ -17,6 +17,8 @@ body {
 }
 
 .page {
+    display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
     min-height: 100vh;

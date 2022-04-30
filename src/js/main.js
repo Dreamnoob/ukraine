@@ -31,9 +31,11 @@ var svgMapDataGPD = {
     }
 };
 
-if (document.querySelector('.map')) {
+const map = document.getElementById('svgMapExample');
+
+if (map) {
     new svgMap({
-        targetElementID: 'svgMapExample',
+        targetElementID: "svgMapExample",
         data: svgMapDataGPD,
         colorNoData: '',
         minZoom: 0.9,
@@ -41,8 +43,6 @@ if (document.querySelector('.map')) {
         initialZoom: 0.9,
     });
 }
-
-
 
 
 
