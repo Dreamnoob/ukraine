@@ -8,7 +8,7 @@
 }
 
 .map__legend {
-    padding: 30px;
+    padding: 30px 30px 72px;
     max-width: 356px;
 
     background: #F4F6F8;
@@ -17,6 +17,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
+    z-index: 2;
 }
 
 .map__legend-tilte {
@@ -83,6 +84,7 @@
     position: absolute;
     top: 48px;
     right: 0;
+    z-index: 2;
 }
 
 .map__filter-title {
@@ -139,8 +141,98 @@
     }
 }
 
-.map__icon {
-    margin-top: 15px;
-    max-width: 90%;
-    height:auto;
+.map__wrapper {
+    width: 90%;
+    height: 784px;
+
+    fill: #6A7178;
+
+    .svgMap-map-wrapper {
+        background: transparent;
+
+        padding-top: unset;
+        height: 100%;
+    }
+
+    .svgMap-country {
+        stroke: rgba(#fff, .5) !important;
+    }
+
+    .svgMap-map-image {
+        left: -170px;
+    }
+
+    .svgMap-map-controls-wrapper {
+        top: 20px;
+        left: 20px;
+        bottom: unset;
+        box-shadow: unset;
+    }
+
+    .svgMap-map-controls-zoom {
+        flex-direction: column;
+
+        border: none;
+        background: transparent;
+    }
+
+    .svgMap-control-button {
+        width: 24px;
+        height: 24px;
+        margin: 0 !important;
+
+        &::before {
+            content: '';
+            width: 100% !important;
+            height: 100% !important;
+
+            background-color: transparent !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: contain !important; 
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &.svgMap-disabled {
+            opacity: .6;
+            pointer-events: none;
+        }
+    }
+
+    .svgMap-zoom-in-button {
+        margin-bottom: 10px !important;
+        &::before {
+            background-image: url("../img/zoom-in.svg") !important;
+        }
+    }
+
+    .svgMap-zoom-out-button {
+        &::before {
+            background-image: url("../img/zoom-out.svg") !important;
+        }
+    }
+
+    #svgMapExample-map-country-RU {
+        fill: #9B7A80;
+    }
+}
+
+.svgMap-tooltip {
+    display: none !important;
+}
+
+.map__uk-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }

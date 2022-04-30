@@ -1,0 +1,153 @@
+.select {
+    position: relative;
+    width: 100%;
+}
+
+.select__top {
+    display: block;
+    width: 100%;
+    height: 61px;
+
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 9px;
+        height: 11px;
+
+        background-image: url("../img/triangle.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        position: absolute;
+        top: 24px;
+        right: 14px;
+
+        transition: .3s linear;
+
+        @media(max-width:1919px) {
+            top: 18px;
+        }
+
+        @media(max-width:767px) {
+            width: 6px;
+            height: 8px;
+            top: 16px;
+        }
+    }
+
+    &.active::before {
+        transform: rotate(180deg);
+    }
+}
+
+.select__main-input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 18px 20px 21px;
+
+    cursor: pointer;
+    border: 1px solid #D8D8D8;
+    border-radius: 7px;
+    background-color: #fff;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #626262;
+
+    &::placeholder {
+        color: #626262;
+    }
+}
+
+.select__content {
+    padding: 0;
+    max-height: 0;
+
+    transition: .3s linear;
+
+    &.active {
+        max-height: 237px;
+        padding: 7.5px 0;
+        z-index: 20;
+
+        @media(max-width:767px) {
+            max-height: 187px;
+        }
+    }
+
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.select__content-item {
+    display: block;
+    cursor: pointer;
+    padding: 12px 15px;
+
+    transition: .2s linear;
+
+    @media(min-width:1024px) {
+        &:hover {
+            background-color: #4E90D9;
+
+            .select__content-name {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.select__content-input {
+    display: none;
+
+    &:checked+.select__content-box {
+        .select__content-name {
+            font-weight: 600;
+            color: #000;
+        }
+    }
+}
+
+.select__content-box {
+    display: flex;
+    align-items: center;
+}
+
+.select__content-img {
+    width: 21px;
+    height: 21px;
+    margin-right: 15px;
+}
+
+.select__content-name {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #696969;
+    text-transform: capitalize;
+
+    transition: .2s linear;
+}
