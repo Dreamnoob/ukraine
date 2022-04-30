@@ -40,14 +40,5 @@ new svgMap({
     initialZoom: 0.9,
 });
 
-/* 
-const ukPath = document.getElementById('svgMapExample-map-country-UA');
-const ukIcon = document.querySelector('.map__uk-icon');
 
-const box = ukPath.getBoundingClientRect();
-const x = box.left;
-const y = box.top;
 
-requestAnimationFrame(() => {
-    ukIcon.style.transform = `translate3d(calc(${x}px), calc(${y - 60}px), 0) `;
-}); */
