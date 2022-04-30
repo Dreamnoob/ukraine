@@ -133,10 +133,144 @@
             margin-top: 25px;
             padding-top: 25px;
             border-top: 5px solid #FFFFFF;
+            margin-bottom: 0;
         }
     }
 }
 
 .history--bottom {
     margin-top: 80px;
+}
+
+
+.history__btn-gallery {
+    background: linear-gradient(180deg, #FF7A00 0%, #DD6A00 100%);
+    border-radius: 10px;
+    height: 51px;
+    padding: 0 15px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+
+    @media(min-width:1024px) {
+        &:hover {
+
+            &::after {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        border: 1px solid #FF7A00;
+        border-radius: 10px;
+        transition: .2s linear;
+        transform: scale(1.2);
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .history-block .container {
+        flex-direction: column;
+    }
+
+    .history-block .col {
+        width: 100%;
+    }
+
+    .history-block .col.col-p-top {
+        padding-top: 0;
+    }
+
+    .history__btn-gallery {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .history {
+        margin-top: 30px;
+    }
+
+    .history h2 {
+        font-size: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .history h2::before {
+        width: 50%;
+        height: 3px;
+    }
+
+    .history-block .img span {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .history-block .col {
+        margin-bottom: 0;
+    }
+
+    .history-block .img-bottom-text {
+        font-size: 20px;
+        padding: 20px 15px;
+
+        p {
+            font-size: 12px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 3px solid #FFFFFF;
+        }
+    }
+
+    .history h3 {
+        margin-top: 30px !important;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .history--bottom {
+        font-size: 12px;
+        margin-top: 40px;
+    }
+
+    .history-block .col.col--mt {
+        margin-top: 0;
+    }
+
+    .history__btn-gallery {
+        width: 100%;
+    }
+
+    .slider-mini .swiper-slide span {
+        font-size: 12px !important;
+        padding: 6px 15px !important;
+    }
+
+    .slider-mini .swiper-button-next,
+    .slider-mini .swiper-button-prev {
+        width: 29px !important;
+        height: 29px !important;
+    }
+
+    .slider-mini .swiper-button-prev {
+        right: 29px !important;
+    }
+
+
 }

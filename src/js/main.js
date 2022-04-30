@@ -31,14 +31,18 @@ var svgMapDataGPD = {
     }
 };
 
-new svgMap({
-    targetElementID: 'svgMapExample',
-    data: svgMapDataGPD,
-    colorNoData: '',
-    minZoom: 0.9,
-    maxZoom: 3,
-    initialZoom: 0.9,
-});
+if (document.querySelector('.map')) {
+    new svgMap({
+        targetElementID: 'svgMapExample',
+        data: svgMapDataGPD,
+        colorNoData: '',
+        minZoom: 0.9,
+        maxZoom: 3,
+        initialZoom: 0.9,
+    });
+}
+
+
 
 
 
