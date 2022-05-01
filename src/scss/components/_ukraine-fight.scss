@@ -4,6 +4,11 @@
 
     position: relative;
 
+    @media(max-width:1023px) {
+        margin-bottom: 30px;
+        padding-bottom: 0;
+    }
+
     &::before {
         content: '';
         background: #F4F6F8;
@@ -14,16 +19,33 @@
         right: 9%;
         bottom: 0;
         z-index: -1;
+
+        @media(max-width:1023px) {
+            top: 0;
+            bottom: 23px;
+            right: 0;
+        }
     }
 }
 
 .ukraine-fight__inner {
     display: flex;
+
+    @media(max-width:1023px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .ukraine-fight__info {
     margin-right: 88px;
     padding-top: 76px;
+
+    @media(max-width:1023px) {
+        padding-top: 30px;
+        margin-bottom: 27px;
+        margin-right: 0;
+    }
 }
 
 .ukraine-fight__title {
@@ -37,6 +59,15 @@
     color: #2C2C2C;
 
     position: relative;
+
+    @media(max-width:800px) {
+        width: 274px;
+        font-size: 20px;
+        line-height: 138.9%;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
 
     &::before {
         content: '';
@@ -59,6 +90,12 @@
     font-size: 16px;
     line-height: 138.9%;
     color: #2C2C2C;
+
+    @media(max-width:800px) {
+        font-size: 12px;
+        line-height: 138.9%;
+        margin-bottom: 27px;
+    }
 }
 
 .ukraine-fight__strong-text {
@@ -68,6 +105,11 @@
     font-size: 16px;
     line-height: 138.9%;
     color: #2C2C2C;
+
+    @media(max-width:800px) {
+        font-size: 12px;
+        line-height: 138.9%;
+    }
 }
 
 .ukraine-fight__hashtag {
@@ -77,6 +119,11 @@
     font-size: 16px;
     line-height: 138.9%;
     color: #005BBB;
+
+    @media(max-width:800px) {
+        font-size: 12px;
+        line-height: 138.9%;
+    }
 }
 
 .ukraine-fight__photo {
@@ -89,5 +136,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    @media(max-width:1554px) {
+        margin-right: 0;
     }
 }

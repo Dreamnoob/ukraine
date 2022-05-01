@@ -1,6 +1,14 @@
 .sanction {
     padding-top: 60px;
     margin-bottom: 57px;
+
+    @media(max-width:1439px) {
+        padding-top: 30px;
+    }
+
+    @media(max-width:800px) {
+        margin-bottom: 30px;
+    }
 }
 
 .sanction__intro {
@@ -8,6 +16,11 @@
     padding-bottom: 40px;
 
     position: relative;
+
+    @media(max-width: 800px) {
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
 
     &::before {
         content: '';
@@ -36,6 +49,14 @@
     font-size: 22px;
     line-height: 138.9%;
     color: #005BBB;
+
+    @media(max-width:800px) {
+        font-size: 16px;
+        line-height: 138.9%;
+
+        margin-bottom: 20px;
+    }
+
 }
 
 .sanction__text {
@@ -43,5 +64,9 @@
     font-size: 16px;
     line-height: 138.9%;
     color: #2C2C2C;
-}
 
+    @media(max-width:800px) {
+        font-size: 12px;
+        line-height: 138.9%;
+    }
+}
