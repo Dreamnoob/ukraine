@@ -1,0 +1,148 @@
+var svgMapDataGPD = {
+    data: {
+        gdp: {
+            name: 'GDP per capita',
+            format: '{0} USD',
+            thousandSeparator: ',',
+            thresholdMax: 50000,
+            thresholdMin: 1000
+        },
+        change: {
+            name: 'Change to year before',
+            format: '{0} %'
+        },
+        gdpAdjusted: {
+            name: 'Purchasing Power Parity',
+            format: '{0} USD',
+            thousandSeparator: ',',
+            thresholdMax: 50000,
+            thresholdMin: 1000
+        },
+        changeAdjusted: {
+            name: 'Change to year before',
+            format: '{0} %'
+        }
+    },
+    applyData: 'gdpAdjusted',
+    values: {
+        AF: { gdp: 587, change: 4.73, gdpAdjusted: 1958, changeAdjusted: 0.02 },
+        link: 'https://cssscript.com',
+        linkTarget: '_blank'
+    }
+};
+
+const map = document.getElementById('svgMapExample');
+
+if (map) {
+    new svgMap({
+        targetElementID: "svgMapExample",
+        data: svgMapDataGPD,
+        colorNoData: '',
+        minZoom: 0.9,
+        maxZoom: 10,
+        initialZoom: 0.9,
+    });
+}
+
+let viewport = document.querySelector(".svg-pan-zoom_viewport");
+let viewport2 = document.querySelector(".svgMap-map-wrapper");
+
+let text = `
+    <svg class="empty__svg"  width="74" height="42" viewBox="0 0 74 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_d_4_9071)">
+    </g>
+    <defs>
+    <filter id="filter0_d_4_9071" x="0.945435" y="0.0412598" width="72.4776" height="41.9098" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feOffset dy="1"/>
+    <feComposite in2="hardAlpha" operator="out"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4_9071"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4_9071" result="shape"/>
+    </filter>
+    <linearGradient id="paint0_linear_4_9071" x1="53%" y1="0%" x2="50%" y2="100%" gradientUnits="objectBoundingBox">
+    <stop offset="0.392336" stop-color="#005BBB"/>
+    <stop offset="0.408687" stop-color="#FFD500"/>
+    </linearGradient>
+    </defs>
+    </svg>
+`;
+
+let text2 = `
+<svg class="hide__svg" width="1464" height="651" viewBox="0 0 1464 651" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.8">
+<path d="M1391 210L1391.52 206.937L1403.29 194.091H1393.66L1394.42 189.636H1411.05L1410.53 192.699L1398.76 205.545H1408.38L1407.62 210H1391Z" fill="white"/>
+<path d="M1418.25 200.415V195.96H1432.96V200.415H1418.25ZM1418.25 207.494V203.04H1432.96V207.494H1418.25Z" fill="white"/>
+</g>
+<g clip-path="url(#clip0_276_9)">
+<path opacity="0.8" d="M1454.76 193.393V197.835H1463.26V210.267H1459.2V201.888H1454.76V210.659H1441.6V206.606H1450.71V201.888H1441.94V189.637H1445.99V197.836H1450.71V189.341H1463.6V193.393H1454.76Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_276_9">
+<rect width="22" height="22" fill="white" transform="translate(1441.6 189)"/>
+</clipPath>
+</defs>
+</svg>
+`;
+
+
+$(text).appendTo(viewport);
+$(text2).appendTo(viewport);
+
+function toggleLegend() {
+    const btn = document.querySelector(".map__legend-btn");
+    const overley = document.querySelector('.overley');
+    const legend = document.querySelector('.map__legend');
+
+    if (btn) {
+        btn.addEventListener('click', () => {
+            legend.classList.add("active");
+            overley.classList.add("active");
+            hideScroll();
+            document.addEventListener('click', clickPast);
+        });
+
+        function closeLegend() {
+            legend.classList.remove("active");
+            overley.classList.remove("active");
+            showScroll();
+            document.removeEventListener('click', clickPast);
+        }
+
+        function clickPast(e) {
+            let withinBoundaries = e.composedPath().includes(legend);
+            let withinBoundaries2 = e.composedPath().includes(btn);
+            if (!withinBoundaries && !withinBoundaries2) {
+                closeLegend();
+            }
+        }
+    }
+}
+
+toggleLegend();
+
+function initFilterTabs() {
+    const filters = document.querySelectorAll(".map__filter-item");
+    const map = document.querySelector(".svgMap-map-image");
+    let tabClass;
+
+    if (filters.length != 0) {
+        filters.forEach(function (item) {
+            item.addEventListener('click', function () {
+                map.classList.remove(tabClass);
+
+                filters.forEach(function (item) {
+                    item.classList.remove('active');
+                });
+
+                item.classList.add("active");
+                tabClass = item.getAttribute("data-id");
+                map.classList.add(tabClass);
+                console.log(tabClass);
+            });
+        });
+    }
+}
+
+initFilterTabs();

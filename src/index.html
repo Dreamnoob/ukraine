@@ -3,10 +3,10 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="theme-color" content="#111111">
+	<meta name="theme-color" content="#FFFFFF">
 	<title>Page</title>
 	<link rel="stylesheet" href="css/vendor.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -35,11 +35,11 @@
 				<div class="map__legend">
 					<p class="map__legend-tilte">Map legend</p>
 					<ul class="map__legend-list">
-						<li class="map__legend-item map__legend-item--rus">
+						<!-- <li class="map__legend-item map__legend-item--rus">
 							<svg>
 								<use xlink:href="img/sprite.svg#rus"></use>
 							</svg>
-						</li>
+						</li> -->
 						<li class="map__legend-item map__legend-item--full">Full sanctions</li>
 						<li class="map__legend-item map__legend-item--partial">Partial sanctions</li>
 						<li class="map__legend-item map__legend-item--refused">Refused to implement sanctions
@@ -50,54 +50,72 @@
 					<p class="map__filter-title">Choose a map of interest</p>
 					<ul class="map__list">
 						<li class="map__list-item">
-							<div class="map__filter-item">Sanctions implemented</div>
-							<div class="map__filter-item">Aluminium embargo</div>
+							<div class="map__filter-item" data-id="sanctions">Sanctions implemented</div>
+							<div class="map__filter-item" data-id="aluminium">Aluminium embargo</div>
 						</li>
 						<li class="map__list-item">
-							<div class="map__filter-item">Gas embargo
+							<div class="map__filter-item" data-id="gas">Gas embargo
 							</div>
-							<div class="map__filter-item">Air closed</div>
+							<div class="map__filter-item" data-id="air">Air closed</div>
 						</li>
 						<li class="map__list-item">
-							<div class="map__filter-item">Oil embargo</div>
-							<div class="map__filter-item">Ports closed</div>
+							<div class="map__filter-item" data-id="oil">Oil embargo</div>
+							<div class="map__filter-item" data-id="ports">Ports closed</div>
 						</li>
 						<li class="map__list-item">
-							<div class="map__filter-item">Coal embargo</div>
-							<div class="map__filter-item">Refuges welcomed</div>
+							<div class="map__filter-item" data-id="coal">Coal embargo</div>
+							<div class="map__filter-item" data-id="refuges">Refuges welcomed</div>
 						</li>
 						<li class="map__list-item">
-							<div class="map__filter-item">Iron embargo</div>
-							<div class="map__filter-item">Weaponry supply</div>
+							<div class="map__filter-item" data-id="iron">Iron embargo</div>
+							<div class="map__filter-item" data-id="weaponry">Weaponry supply</div>
 						</li>
 						<li class="map__list-item">
-							<div class="map__filter-item">Diamonds embargo</div>
-							<div class="map__filter-item">Z prohibited</div>
+							<div class="map__filter-item" data-id="diamonds">Diamonds embargo</div>
+							<div class="map__filter-item" data-id="prohibited">Z prohibited</div>
 						</li>
 						<li class="map__list-item">
-							<div class="map__filter-item">Nickel embargo</div>
-							<div class="map__filter-item">Genocide admitted </div>
+							<div class="map__filter-item" data-id="nickel">Nickel embargo</div>
+							<div class="map__filter-item" data-id="genocide">Genocide admitted</div>
 						</li>
 						<li class="map__list-item">
-							<div class="map__filter-item">Copper embargo</div>
-							<div class="map__filter-item">Other</div>
+							<div class="map__filter-item" data-id="copper">Copper embargo</div>
+							<div class="map__filter-item" data-id="other">Other</div>
 						</li>
 						<li class="map__list-item">
-							<div class="map__filter-item">Hi-tech embargo</div>
-							<div class="map__filter-item">Other</div>
+							<div class="map__filter-item" data-id="hi-tech">Hi-tech embargo</div>
+							<div class="map__filter-item" data-id="other">Other</div>
 						</li>
 						<li class="map__list-item">
-							<div class="map__filter-item">Wartech embargo</div>
-							<div class="map__filter-item">Other</div>
+							<div class="map__filter-item" data-id="wartech">Wartech embargo</div>
+							<div class="map__filter-item" data-id="other">Other</div>
 						</li>
 					</ul>
 				</div>
 				<div class="map__wrapper" id="svgMapExample">
+					<button class="map__legend-btn"></button>
 				</div>
 			</section>
 		</main>
+		<svg width="1394" height="651" viewBox="0 0 1394 651" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g opacity="0.8">
+				<path d="M958 136L958.517 132.937L970.29 120.091H960.665L961.42 115.636H978.045L977.528 118.699L965.756 131.545H975.381L974.625 136H958Z" fill="white" />
+				<path d="M985.247 126.415V121.96H999.963V126.415H985.247ZM985.247 133.494V129.04H999.963V133.494H985.247Z" fill="white" />
+			</g>
+			<g clip-path="url(#clip0_276_9)">
+				<path opacity="0.8" d="M1021.76 119.393V123.835H1030.26V136.267H1026.2V127.888H1021.76V136.659H1008.6V132.606H1017.71V127.888H1008.94V115.637H1012.99V123.836H1017.71V115.341H1030.6V119.393H1021.76Z" fill="white" />
+			</g>
+			<defs>
+				<clipPath id="clip0_276_9">
+					<rect width="22" height="22" fill="white" transform="translate(1008.6 115)" />
+				</clipPath>
+			</defs>
+		</svg>
 
 		@include('partials/footer.html')
+		<div class="overley">
+
+		</div>
 	</div>
 	<script src="js/vendor.js"></script>
 	<script src="js/main.js"></script>
