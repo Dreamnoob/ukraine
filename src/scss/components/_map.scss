@@ -61,10 +61,17 @@
         margin-top: 15px;
     }
 
+    &--rus {
+        &::before {
+            background: #9B7A80;
+        }
+    }
+
     &--full {
         &::before {
             background: #1DD100;
         }
+
     }
 
     &--partial {
@@ -77,6 +84,11 @@
         &::before {
             background: #FF7A00;
         }
+    }
+
+    svg {
+        width: 72.6px;
+        height: 19px;
     }
 }
 
@@ -156,10 +168,15 @@
 
     .svgMap-country {
         stroke: rgba(#fff, .5) !important;
+        transition: unset;
+
+        &:hover {
+            stroke-width: 1;
+        }
     }
 
     .svgMap-map-image {
-        left: -170px;
+        // left: -170px;
     }
 
     .svgMap-map-controls-wrapper {
@@ -225,26 +242,26 @@
     #svgMapExample-map-country-RU {
         fill: #9B7A80;
     }
+
+
 }
 
 .svgMap-tooltip {
     display: none !important;
 }
-/* 
 
-.map__uk-icon {
-    width: 62px;
-    height: 34px;
+.empty__svg {
+    pointer-events: none;
+}
 
+#svgMapExample-map-country-UA {
+    fill: url(#paint0_linear_4_9071);
+}
+
+.svg-rus {
     position: absolute;
-    top: -77px;
-    left: 835px;
-    z-index: 2;
-
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-} */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
