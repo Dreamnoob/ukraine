@@ -55,7 +55,7 @@ function showModal(modalItem) {
 }
 
 
-bindModal('.history__btn-gallery', '.modal-gallery');
+bindModal('.show-gallery', '.modal-gallery');
 
 
 //////////////////////////////////////////////////////////////////////////////

@@ -81,7 +81,7 @@
 
     .sanctions-block__img {
         position: static;
-        width: 100%;
+        width: calc(100% - 30px);
         margin: -15px auto 0 auto;
         z-index: 1;
         height: auto;

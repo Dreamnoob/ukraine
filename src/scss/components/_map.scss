@@ -38,13 +38,13 @@
         z-index: 101;
         bottom: unset;
         transform: translate(-50%, -50%);
-        
+
         border-radius: 5px 5px 0px 5px;
         opacity: 0;
         visibility: hidden;
-        transition: .3s linear;
 
         &.active {
+            transition: .3s linear;
             opacity: 1;
             visibility: visible;
         }

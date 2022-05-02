@@ -32,6 +32,28 @@
         </div>
 
         <main>
+            <section class="donate-intro">
+                <div class="container sanctions-block__wrapper">
+                    <div class="sanctions-block__info">
+                        <h2 class="sanctions-block__title">
+                            Donate
+                        </h2>
+                        <div class="sanctions-block__descr">
+                            <p>
+                                Благодарим Вас за небезразличие в поддержке Украины. Все полученные средства будут направлены на медицинскую помощь военным и гражданским Украины, а также другие ключевые потребности.
+                            </p>
+                            <p>
+                                <b>
+                                    Благодаря Вам мы сможем спасти больше жизней! <br>
+                                    Тот, кто спасает одну жизнь, спасает весь мир!
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+
+                    <img class="sanctions-block__img" loading="lazy" src="img/donate-intro.jpg" alt="img">
+                </div>
+            </section>
             <section class="donate">
                 <div class="container">
                     <div class="donate__inner">
@@ -91,29 +113,29 @@
                                         <div class="donate__group donate__group--sum">
                                             <button class="donate__plus" type="button" data-plus="1"></button>
                                             <button class="donate__minus" type="button" data-minus="1"></button>
-                                            <input class="donate__input donate__input--number" type="text" placeholder="Введите сумму пожертвования" name="sum">
+                                            <input class="donate__input donate__input--number" type="text" placeholder="Введите сумму пожертвования" name="sum" value="2">
                                         </div>
                                         <div class="donate__group donate__group--currency">
                                             <div class="select">
                                                 <label class="select__top">
-                                                    <input class="select__main-input" type="text" value='Грн' placeholder="Выберите тариф" name="select" readonly>
+                                                    <input class="select__main-input" type="text" value='Грн' placeholder="Выберите тариф" name="select3" readonly>
                                                 </label>
 
                                                 <div class="select__content">
                                                     <label class="select__content-item">
-                                                        <input class="select__content-input" type="radio" name="SelectItem" checked>
+                                                        <input class="select__content-input" type="radio" name="SelectItem3" checked>
                                                         <div class="select__content-box">
                                                             <p class="select__content-name">Грн</p>
                                                         </div>
                                                     </label>
                                                     <label class="select__content-item">
-                                                        <input class="select__content-input" type="radio" name="SelectItem">
+                                                        <input class="select__content-input" type="radio" name="SelectItem3">
                                                         <div class="select__content-box">
                                                             <p class="select__content-name">Євро (EUR)</p>
                                                         </div>
                                                     </label>
                                                     <label class="select__content-item">
-                                                        <input class="select__content-input" type="radio" name="SelectItem">
+                                                        <input class="select__content-input" type="radio" name="SelectItem3">
                                                         <div class="select__content-box">
                                                             <p class="select__content-name">Долар США (USD)</p>
                                                         </div>
@@ -164,12 +186,24 @@
                         </form>
                         <div class="currency">
                             <div class="currency__list">
-                                <button class="currency__btn active" type="button" data-id="uah">У гривнях (UAH)</button>
-                                <button class="currency__btn" type="button" data-id="card">Банківська картка</button>
-                                <button class="currency__btn" type="button" data-id="eur">Євро (EUR)</button>
-                                <button class="currency__btn" type="button" data-id="usd">У доларах США (USD)</button>
-                                <button class="currency__btn" type="button" data-id="webMoney">WebMoney</button>
-                                <button class="currency__btn" type="button" data-id="crypto">Crypto </button>
+                                <div class="currency__wrapper">
+                                    <button class="currency__btn active" type="button" data-id="uah">У гривнях (UAH)</button>
+                                </div>
+                                <div class="currency__wrapper">
+                                    <button class="currency__btn" type="button" data-id="card">Банківська картка</button>
+                                </div>
+                                <div class="currency__wrapper">
+                                    <button class="currency__btn" type="button" data-id="eur">Євро (EUR)</button>
+                                </div>
+                                <div class="currency__wrapper">
+                                    <button class="currency__btn" type="button" data-id="usd">У доларах США (USD)</button>
+                                </div>
+                                <div class="currency__wrapper">
+                                    <button class="currency__btn" type="button" data-id="webMoney">WebMoney</button>
+                                </div>
+                                <div class="currency__wrapper">
+                                    <button class="currency__btn" type="button" data-id="crypto">Crypto </button>
+                                </div>
                             </div>
                             <div class="currency__content">
                                 <div class="currency__item active" id="uah">
@@ -185,12 +219,59 @@
                                 </div>
                                 <div class="currency__item" id="card">
                                     <p class="currency__title">Банківська картка</p>
+                                    <p class="currency__subtitle">Расчетный счет</p>
+                                    <p class="currency__info">
+                                        БЛАГОДIЙНИЙ ФОНД ПОМАГАЄМ <br>
+                                        ЄДРПОУ 36532282 <br>
+                                        в АТ КБ "ПРИВАТБАНК МФО 305299 <br>
+                                        р/с UA583052990000026008050238195 <br>
+                                    </p>
+                                    <p class="currency__descr">Якщо ви хочете зробити пожертвування на певну дитину, лікарню, сім'ю або проект, вкажіть, будь ласка, у призначенні платежу назву потреби.</p>
                                 </div>
                                 <div class="currency__item" id="eur">
+                                    <p class="currency__title">Євро (EUR)</p>
+                                    <p class="currency__subtitle">Расчетный счет</p>
+                                    <p class="currency__info">
+                                        БЛАГОДIЙНИЙ ФОНД ПОМАГАЄМ <br>
+                                        ЄДРПОУ 36532282 <br>
+                                        в АТ КБ "ПРИВАТБАНК МФО 305299 <br>
+                                        р/с UA583052990000026008050238195 <br>
+                                    </p>
+                                    <p class="currency__descr">Якщо ви хочете зробити пожертвування на певну дитину, лікарню, сім'ю або проект, вкажіть, будь ласка, у призначенні платежу назву потреби.</p>
                                 </div>
-                                <div class="currency__item" id="usd"></div>
-                                <div class="currency__item" id="webMoney"></div>
-                                <div class="currency__item" id="crypto"></div>
+                                <div class="currency__item" id="usd">
+                                    <p class="currency__title">У доларах США (USD)</p>
+                                    <p class="currency__subtitle">Расчетный счет</p>
+                                    <p class="currency__info">
+                                        БЛАГОДIЙНИЙ ФОНД ПОМАГАЄМ <br>
+                                        ЄДРПОУ 36532282 <br>
+                                        в АТ КБ "ПРИВАТБАНК МФО 305299 <br>
+                                        р/с UA583052990000026008050238195 <br>
+                                    </p>
+                                    <p class="currency__descr">Якщо ви хочете зробити пожертвування на певну дитину, лікарню, сім'ю або проект, вкажіть, будь ласка, у призначенні платежу назву потреби.</p>
+                                </div>
+                                <div class="currency__item" id="webMoney">
+                                    <p class="currency__title">WebMoney</p>
+                                    <p class="currency__subtitle">Расчетный счет</p>
+                                    <p class="currency__info">
+                                        БЛАГОДIЙНИЙ ФОНД ПОМАГАЄМ <br>
+                                        ЄДРПОУ 36532282 <br>
+                                        в АТ КБ "ПРИВАТБАНК МФО 305299 <br>
+                                        р/с UA583052990000026008050238195 <br>
+                                    </p>
+                                    <p class="currency__descr">Якщо ви хочете зробити пожертвування на певну дитину, лікарню, сім'ю або проект, вкажіть, будь ласка, у призначенні платежу назву потреби.</p>
+                                </div>
+                                <div class="currency__item" id="crypto">
+                                    <p class="currency__title">Crypto</p>
+                                    <p class="currency__subtitle">Расчетный счет</p>
+                                    <p class="currency__info">
+                                        БЛАГОДIЙНИЙ ФОНД ПОМАГАЄМ <br>
+                                        ЄДРПОУ 36532282 <br>
+                                        в АТ КБ "ПРИВАТБАНК МФО 305299 <br>
+                                        р/с UA583052990000026008050238195 <br>
+                                    </p>
+                                    <p class="currency__descr">Якщо ви хочете зробити пожертвування на певну дитину, лікарню, сім'ю або проект, вкажіть, будь ласка, у призначенні платежу назву потреби.</p>
+                                </div>
                             </div>
                         </div>
                     </div>

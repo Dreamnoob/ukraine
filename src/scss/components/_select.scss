@@ -24,10 +24,19 @@
         right: 20px;
 
         transition: .3s linear;
+
+        @media(max-width:767px) {
+            top: 21px;
+            right: 15px;
+        }
     }
 
     &.active::before {
         transform: rotate(180deg);
+    }
+
+    @media(max-width:767px) {
+        height: 51px;
     }
 }
 
@@ -51,6 +60,11 @@
 
     &::placeholder {
         color: #626262;
+    }
+
+    @media(max-width:767px) {
+        font-size: 12px;
+        line-height: 15px;
     }
 }
 
@@ -108,6 +122,10 @@
             }
         }
     }
+
+    @media(max-width:767px) {
+        padding: 10px 15px;
+    }
 }
 
 .select__content-input {
@@ -139,4 +157,9 @@
     color: #696969;
 
     transition: .2s linear;
+
+    @media(max-width:767px) {
+        font-size: 12px;
+        line-height: 15px;
+    }
 }
