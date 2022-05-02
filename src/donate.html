@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Page</title>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<!-- <svg class="svg">
+    <use xlink:href="img/sprite.svg#telega"></use>
+</svg> -->
+
+<body>
+    <div class="page">
+        @include('partials/header.html')
+
+        <div class="breadcrumbs">
+            <div class="container">
+                <div class="breadcrumbs__inner">
+                    <p class="breadcrumbs__item">Why sanctions
+                        are important</p>
+                    <p class="breadcrumbs__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <section class="donate">
+                <div class="container">
+                    <div class="donate__inner">
+                        <form class="donate__board" action="/">
+                            <div class="donate__nav">
+                                <button class="donate__tab active" data-id="oneTime" type="button">Разовое пожертвование</button>
+                                <button class="donate__tab" data-id="regular" type="button">Регулярные пожертвования</button>
+                            </div>
+                            <div class="donate__content">
+                                <div class="donate__item active" id="oneTime">
+                                    <p class="donate__subtitle">Поддержите наш фонд и нашу страну</p>
+                                    <p class="donate__title">Сделать разовое пожертвования</p>
+                                    <div class="donate__form">
+                                        <div class="donate__group donate__group--sum">
+                                            <button class="donate__plus" type="button" data-plus="1"></button>
+                                            <button class="donate__minus" type="button" data-minus="1"></button>
+                                            <input class="donate__input donate__input--number" type="text" placeholder="Введите сумму пожертвования" name="sum">
+                                        </div>
+                                        <div class="donate__group donate__group--currency">
+                                            <div class="select">
+                                                <label class="select__top">
+                                                    <input class="select__main-input" type="text" value='Грн' placeholder="Выберите тариф" name="select" readonly>
+                                                </label>
+
+                                                <div class="select__content">
+                                                    <label class="select__content-item">
+                                                        <input class="select__content-input" type="radio" name="SelectItem" checked>
+                                                        <div class="select__content-box">
+                                                            <p class="select__content-name">Грн</p>
+                                                        </div>
+                                                    </label>
+                                                    <label class="select__content-item">
+                                                        <input class="select__content-input" type="radio" name="SelectItem">
+                                                        <div class="select__content-box">
+                                                            <p class="select__content-name">Євро (EUR)</p>
+                                                        </div>
+                                                    </label>
+                                                    <label class="select__content-item">
+                                                        <input class="select__content-input" type="radio" name="SelectItem">
+                                                        <div class="select__content-box">
+                                                            <p class="select__content-name">Долар США (USD)</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="donate__group donate__group--name">
+                                            <input class="donate__input" type="text" name="name" placeholder="Ваше Имя">
+                                        </div>
+                                        <button class="btn-green donate__btn">Пожертвовать</button>
+                                    </div>
+                                </div>
+                                <div class="donate__item" id="regular">
+                                    <p class="donate__subtitle">Поддержите наш фонд и нашу страну</p>
+                                    <p class="donate__title">Сделать разовое пожертвования</p>
+                                    <div class="donate__form">
+                                        <div class="donate__group donate__group--sum">
+                                            <button class="donate__plus" type="button" data-plus="1"></button>
+                                            <button class="donate__minus" type="button" data-minus="1"></button>
+                                            <input class="donate__input donate__input--number" type="text" placeholder="Введите сумму пожертвования" name="sum">
+                                        </div>
+                                        <div class="donate__group donate__group--currency">
+                                            <div class="select">
+                                                <label class="select__top">
+                                                    <input class="select__main-input" type="text" value='Грн' placeholder="Выберите тариф" name="select" readonly>
+                                                </label>
+
+                                                <div class="select__content">
+                                                    <label class="select__content-item">
+                                                        <input class="select__content-input" type="radio" name="SelectItem" checked>
+                                                        <div class="select__content-box">
+                                                            <p class="select__content-name">Грн</p>
+                                                        </div>
+                                                    </label>
+                                                    <label class="select__content-item">
+                                                        <input class="select__content-input" type="radio" name="SelectItem">
+                                                        <div class="select__content-box">
+                                                            <p class="select__content-name">Євро (EUR)</p>
+                                                        </div>
+                                                    </label>
+                                                    <label class="select__content-item">
+                                                        <input class="select__content-input" type="radio" name="SelectItem">
+                                                        <div class="select__content-box">
+                                                            <p class="select__content-name">Долар США (USD)</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="donate__group donate__group--payment">
+                                            <p class="donate__group-name">Регулярность выплаты:</p>
+                                            <div class="select">
+                                                <label class="select__top">
+                                                    <input class="select__main-input" type="text" value='Раз в месяц' placeholder="Выберите тариф" name="payment" readonly>
+                                                </label>
+
+                                                <div class="select__content">
+                                                    <label class="select__content-item">
+                                                        <input class="select__content-input" type="radio" name="paymentItem" checked>
+                                                        <div class="select__content-box">
+                                                            <p class="select__content-name">Раз в месяц</p>
+                                                        </div>
+                                                    </label>
+                                                    <label class="select__content-item">
+                                                        <input class="select__content-input" type="radio" name="paymentItem">
+                                                        <div class="select__content-box">
+                                                            <p class="select__content-name">Два раза в месяц</p>
+                                                        </div>
+                                                    </label>
+                                                    <label class="select__content-item">
+                                                        <input class="select__content-input" type="radio" name="paymentItem">
+                                                        <div class="select__content-box">
+                                                            <p class="select__content-name">Три раза в месяц</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="donate__group donate__group--date">
+                                            <p class="donate__group-name">Дата первой выплаты:</p>
+                                            <input class="donate__input" type="text" id="datepicker" name="date" placeholder="дд.мм.гггг" autocomplete="off">
+                                        </div>
+                                        <div class="donate__group donate__group--name">
+                                            <input class="donate__input" type="text" name="name" placeholder="Ваше Имя">
+                                        </div>
+                                        <button class="btn-green donate__btn">Пожертвовать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="currency">
+                            <div class="currency__list">
+                                <button class="currency__btn active" type="button" data-id="uah">У гривнях (UAH)</button>
+                                <button class="currency__btn" type="button" data-id="card">Банківська картка</button>
+                                <button class="currency__btn" type="button" data-id="eur">Євро (EUR)</button>
+                                <button class="currency__btn" type="button" data-id="usd">У доларах США (USD)</button>
+                                <button class="currency__btn" type="button" data-id="webMoney">WebMoney</button>
+                                <button class="currency__btn" type="button" data-id="crypto">Crypto </button>
+                            </div>
+                            <div class="currency__content">
+                                <div class="currency__item active" id="uah">
+                                    <p class="currency__title">У гривнях (UAH)</p>
+                                    <p class="currency__subtitle">Расчетный счет</p>
+                                    <p class="currency__info">
+                                        БЛАГОДIЙНИЙ ФОНД ПОМАГАЄМ <br>
+                                        ЄДРПОУ 36532282 <br>
+                                        в АТ КБ "ПРИВАТБАНК МФО 305299 <br>
+                                        р/с UA583052990000026008050238195 <br>
+                                    </p>
+                                    <p class="currency__descr">Якщо ви хочете зробити пожертвування на певну дитину, лікарню, сім'ю або проект, вкажіть, будь ласка, у призначенні платежу назву потреби.</p>
+                                </div>
+                                <div class="currency__item" id="card">
+                                    <p class="currency__title">Банківська картка</p>
+                                </div>
+                                <div class="currency__item" id="eur">
+                                </div>
+                                <div class="currency__item" id="usd"></div>
+                                <div class="currency__item" id="webMoney"></div>
+                                <div class="currency__item" id="crypto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        @include('partials/footer.html')
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        /* Локализация datepicker */
+        $.datepicker.regional['ru'] = {
+            closeText: 'Закрыть',
+            prevText: 'Предыдущий',
+            nextText: 'Следующий',
+            currentText: 'Сегодня',
+            monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+            monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+            dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+            dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+            dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            weekHeader: 'Не',
+            dateFormat: 'dd.mm.yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: '',
+        };
+        $.datepicker.setDefaults($.datepicker.regional['ru']);
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

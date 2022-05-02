@@ -1,0 +1,369 @@
+.donate {
+    margin-bottom: 100px;
+}
+
+.donate__inner {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.donate__board {
+    margin-bottom: 60px;
+}
+
+.donate__nav {
+    display: flex;
+    width: fit-content;
+    border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
+}
+
+.donate__tab {
+    padding: 15px;
+
+    transition: .2s linear;
+    background: #CFDAE3;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #8F8F8F;
+
+    &.active {
+        color: #2C2C2C;
+        background: #F4F6F8;
+    }
+}
+
+.donate__content {
+    padding: 30px;
+    background: #F4F6F8;
+    border-radius: 0px 5px 5px 5px;
+}
+
+.donate__item {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.donate__subtitle {
+    margin-bottom: 12px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #005BBB
+}
+
+.donate__title {
+    margin-bottom: 34px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: #373737;
+}
+
+.donate__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.donate__group {
+    margin-bottom: 20px;
+    position: relative;
+
+    &--sum {
+        width: 540px;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 40px;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    &--currency {
+        width: 270px;
+    }
+
+    &--payment {
+        width: calc(50% - 15px);
+    }
+
+    &--date {
+        width: calc(50% - 15px);
+
+        &::before {
+            content: '';
+            width: 26px;
+            height: 26px;
+
+            background-image: url("../img/calendar.svg");
+            background-size: contain;
+            pointer-events: none;
+
+            position: absolute;
+            right: 20px;
+            bottom: 18px;
+        }
+    }
+
+    &--name {
+        width: 100%;
+    }
+}
+
+.donate__group-name {
+    margin-bottom: 15px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #373737;
+}
+
+.donate__plus,
+.donate__minus {
+    display: block;
+    width: 10px;
+    height: 8px;
+
+    transition: .2s linear;
+    background-image: url("../img/triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    position: absolute;
+    right: 20px;
+}
+
+.donate__plus {
+    top: 18px;
+    transform: rotate(180deg);
+
+    @media(min-width:1024px) {
+        &:hover {
+            transform: scale(1.8) rotate(180deg);
+        }
+    }
+}
+
+.donate__minus {
+    bottom: 18px;
+
+    @media(min-width:1024px) {
+        &:hover {
+            transform: scale(1.8);
+        }
+    }
+}
+
+.donate__input {
+    display: block;
+    width: 100%;
+    padding: 20px 40px 20px 20px;
+    height: 61px;
+
+    background: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    border-radius: 7px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #626262;
+
+    &::placeholder {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #626262;
+    }
+}
+
+.donate__btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui-widget.ui-widget-content {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+    border: none;
+    margin-top: 4px;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    border: none;
+    background: transparent;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+    transition: .2s linear;
+    top: 2px !important;
+    left: 5px !important;
+    border: none !important;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 8px;
+
+        transition: 0.2s linear;
+        background-image: url(../img/triangle.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
+
+.ui-datepicker .ui-datepicker-next {
+    top: 2px !important;
+    right: 5px !important;
+    transition: .2s linear;
+    border: none !important;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 8px;
+
+        transition: 0.2s linear;
+        background-image: url(../img/triangle.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+}
+
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+    display: none;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+    // background: #F4F6F8;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight {
+    background: #FFD500;
+    color: #2d2d2d;
+}
+
+.currency {
+    display: flex;
+}
+
+.currency__list {
+    min-width: 270px;
+    margin-right: 49px;
+}
+
+.currency__btn {
+    display: block;
+    width: 100%;
+    padding: 23px 22px;
+
+    background: #F4F6F8;
+    border: 1px solid #CFCFCF;
+    border-radius: 5px;
+    transition: .2s linear;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #373737;
+
+    @media(min-width:1024px) {
+        &:hover {
+            background: #005BBB;
+            color: #FFFFFF;
+        }
+    }
+
+    &.active {
+        background: #005BBB;
+        color: #FFFFFF;
+    }
+
+    &+& {
+        margin-top: 10px;
+    }
+}
+
+.currency__content {}
+
+.currency__item {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.currency__title {
+    margin-bottom: 34px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: #373737;
+}
+
+.currency__subtitle {
+    margin-bottom: 17px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #373737;
+}
+
+.currency__info {
+    margin-bottom: 28px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #626262;
+}
+
+.currency__descr {
+    padding: 10px;
+    
+    background: #F8F8F8;
+    border-radius: 7px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #626262;
+}

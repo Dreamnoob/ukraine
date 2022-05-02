@@ -12,28 +12,18 @@
 
     &::before {
         content: '';
-        width: 9px;
-        height: 11px;
+        width: 10px;
+        height: 8px;
 
         background-image: url("../img/triangle.svg");
         background-repeat: no-repeat;
         background-size: 100% 100%;
 
         position: absolute;
-        top: 24px;
-        right: 14px;
+        top: 26px;
+        right: 20px;
 
         transition: .3s linear;
-
-        @media(max-width:1919px) {
-            top: 18px;
-        }
-
-        @media(max-width:767px) {
-            width: 6px;
-            height: 8px;
-            top: 16px;
-        }
     }
 
     &.active::before {
@@ -111,10 +101,10 @@
 
     @media(min-width:1024px) {
         &:hover {
-            background-color: #4E90D9;
+            background-color: #CDDEF0;
 
             .select__content-name {
-                color: #fff;
+                color: #000;
             }
         }
     }
@@ -147,7 +137,6 @@
     font-size: 16px;
     line-height: 22px;
     color: #696969;
-    text-transform: capitalize;
 
     transition: .2s linear;
 }

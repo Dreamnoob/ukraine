@@ -139,7 +139,6 @@ function initFilterTabs() {
                 item.classList.add("active");
                 tabClass = item.getAttribute("data-id");
                 map.classList.add(tabClass);
-                console.log(tabClass);
             });
         });
     }
