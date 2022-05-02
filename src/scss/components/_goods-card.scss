@@ -1,0 +1,160 @@
+.goods-card {
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.goods-card__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 138.9%;
+    color: #2C2C2C;
+    position: relative;
+    width: fit-content;
+    padding-bottom: 40px;
+
+    &::before {
+        position: absolute;
+        content: '';
+        border-bottom: 5px solid #2C2C2C;
+        width: 80%;
+        bottom: 0;
+    }
+}
+
+.goods-card__wrapper {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.goods-card-item {
+    background: #F4F6F8;
+    box-shadow: 0px 69px 80px rgba(0, 0, 0, 0.030926),
+        0px 28.8265px 33.4221px rgba(0, 0, 0, 0.0444282),
+        0px 15.4121px 17.869px rgba(0, 0, 0, 0.055),
+        0px 8.63987px 10.0172px rgba(0, 0, 0, 0.0655718),
+        0px 4.58857px 5.32008px rgba(0, 0, 0, 0.079074),
+        0px 1.90941px 2.21381px rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+}
+
+.goods-card-item__img {
+    padding: 20px;
+    height: 235px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.goods-card-item__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 138.9%;
+    text-align: center;
+    color: #2C2C2C;
+    margin-top: 10px;
+    padding: 0 30px;
+    min-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goods-card-item__list {
+    margin-top: 20px;
+    padding: 0 10px 15px;
+
+    li {
+        margin-bottom: 15px;
+
+        &:first-child {
+            span {
+                &:last-child {
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 138.9%;
+            color: #2C2C2C;
+
+            &:last-child {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 980px) {
+    .goods-card__wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .goods-card__title {
+        font-size: 25px;
+        padding-bottom: 20px;
+
+        &::before {
+            border-width: 3px;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .goods-card {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    .goods-card__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .goods-card__title {
+        font-size: 20px;
+    }
+
+    .goods-card-item__title {
+        font-size: 12px;
+        min-height: 34px;
+        padding: 0 5px;
+    }
+
+    .goods-card-item__list {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .goods-card-item__list li span {
+        font-size: 10px;
+        display: block;
+    }
+
+    .goods-card-item__list li {
+        margin-bottom: 10px;
+    }
+
+    .goods-card-item__img {
+        height: 135px;
+    }
+}
