@@ -1,0 +1,133 @@
+.sanctions-block {
+    margin-top: 80px;
+}
+
+
+
+
+.sanctions-block__wrapper {
+    padding: 35px 15px;
+    position: relative;
+}
+
+.sanctions-block__info {
+    background: #F4F6F8;
+    padding: 40px;
+    max-width: 635px;
+    min-height: 463px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sanctions-block__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 138.9%;
+    color: #2C2C2C;
+    padding-bottom: 25px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        border-bottom: 5px solid #2C2C2C;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+    }
+}
+
+.sanctions-block__descr {
+    margin-top: 25px;
+
+    p {
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 138.9%;
+        color: #2C2C2C;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.sanctions-block__img {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+@media (max-width: 880px) {
+    .sanctions-block {
+        margin-top: 30px;
+    }
+
+    .sanctions-block__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+
+        picture {
+            width: 90%;
+        }
+    }
+
+    .sanctions-block__img {
+        position: static;
+        width: 100%;
+        margin: -15px auto 0 auto;
+        z-index: 1;
+        height: auto;
+
+    }
+
+    .sanctions-block__info {
+        max-width: 100%;
+        min-height: inherit;
+    }
+}
+
+@media (max-width: 640px) {
+    .sanctions-block__info {
+        padding: 30px 15px;
+    }
+
+    .sanctions-block__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 138.9%;
+        color: #2C2C2C;
+        padding-bottom: 20px;
+
+        &::before {
+            border-width: 3px;
+        }
+
+        br {
+            display: none;
+        }
+    }
+
+    .sanctions-block__descr {
+        margin-right: 20px;
+    }
+
+    .sanctions-block__descr p {
+        font-size: 12px;
+
+        b {
+            font-size: 12px;
+        }
+    }
+
+    .sanctions-block__img {
+        height: 197px;
+    }
+}

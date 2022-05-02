@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Page</title>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="page">
+        @include('partials/header.html')
+
+        <div class="breadcrumbs">
+            <div class="container">
+                <div class="breadcrumbs__inner">
+                    <p class="breadcrumbs__item">Action Needed</p>
+                    <p class="breadcrumbs__item breadcrumbs__item--subcategory">Goods</p>
+                    <p class="breadcrumbs__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna
+                        aliqua.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <main>
+
+            <section class="sanctions-block">
+                <div class="container sanctions-block__wrapper">
+                    <div class="sanctions-block__info">
+                        <h2 class="sanctions-block__title">
+                            Санкции Компаний
+                        </h2>
+                        <div class="sanctions-block__descr">
+                            <p>
+                                На этой вкладке собраны все компании, которые ввели санкции против России. Перечень
+                                компаний разбит по секторам для
+                                удобства просмотра, также дана информация о том какие именно санкции были введены.
+                            </p>
+                            <p>
+                                <b>
+                                    В случае, если Вы заметили неточность или нужной компании в списке не оказалось,
+                                    напишите на почту администратору сайта.
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+
+                    <picture>
+                        <source media="(max-width: 640px)" srcset="img/sanctions-block-img5-mob.jpg">
+                        <img class="sanctions-block__img" loading="lazy" src="img/sanctions-block-img5.jpg" alt="img">
+                    </picture>
+                </div>
+            </section>
+
+            <div class="table company-table company-table--v2">
+                <div class="container">
+                    <form class="table-search">
+                        <input type="text" placeholder="Company/Product search">
+                        <button class="table-search__btn"></button>
+                    </form>
+                    <div class="table-sort table-sort--v1">
+                        <div>All business</div>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon.svg" alt="img">
+                            IT and <br>
+                            Electronics
+                        </button>
+                        <button class="active">
+                            <img loading="lazy" src="img/table-sort-icon2.svg" alt="img">
+                            Automotive
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon3.svg" alt="img">
+                            Retail
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon4.svg" alt="img">
+                            Finance
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon5.svg" alt="img">
+                            Consulting
+                            Services
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon6.svg" alt="img">
+                            Education
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon7.svg" alt="img">
+                            Chemical
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon8.svg" alt="img">
+                            Manufacturing
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon9.svg" alt="img">
+                            Food & <br>
+                            Agriculture
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon10.svg" alt="img">
+                            Entertainment <br>
+                            and Media
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon11.svg" alt="img">
+                            Logistics
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon12.svg" alt="img">
+                            Healthcare
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon13.svg" alt="img">
+                            Airospace
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon14.svg" alt="img">
+                            Hospitality
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon15.svg" alt="img">
+                            Mining
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon16.svg" alt="img">
+                            Energy
+                        </button>
+                        <button>
+                            <img loading="lazy" src="img/table-sort-icon17.svg" alt="img">
+                            Military
+                        </button>
+                    </div>
+                    <div class="table__wrapper">
+                        <div class="table-row table-row-top">
+                            <span>Status</span>
+                            <span>Company</span>
+                            <span>Country</span>
+                            <span>Sector</span>
+                            <span>Description</span>
+                        </div>
+                        <div class="table-row table-row-item">
+                            <div>
+                                No business restrictions in Russia
+                            </div>
+                            <div>
+                                Leroy Marlin
+                                <img loading="lazy" src="img/company-table-icon.svg" alt="img">
+                            </div>
+                            <div>
+                                France
+                                <img loading="lazy" src="img/company-table-icon2.svg" alt="img">
+                            </div>
+                            <div>
+                                Retail
+                            </div>
+                            <div>
+                                One of the largest European DIY
+                                retailers
+                            </div>
+                        </div>
+                        <div class="table-row table-row-item">
+                            <div>
+                                No business restrictions in Russia
+                            </div>
+                            <div>
+                                Leroy Marlin
+                                <img loading="lazy" src="img/company-table-icon.svg" alt="img">
+                            </div>
+                            <div>
+                                France
+                                <img loading="lazy" src="img/company-table-icon2.svg" alt="img">
+                            </div>
+                            <div>
+                                Retail
+                            </div>
+                            <div>
+                                One of the largest European DIY
+                                retailers
+                            </div>
+                        </div>
+                        <div class="table-row table-row-item">
+                            <div>
+                                No business restrictions in Russia
+                            </div>
+                            <div>
+                                Leroy Marlin
+                                <img loading="lazy" src="img/company-table-icon.svg" alt="img">
+                            </div>
+                            <div>
+                                France
+                                <img loading="lazy" src="img/company-table-icon2.svg" alt="img">
+                            </div>
+                            <div>
+                                Retail
+                            </div>
+                            <div>
+                                One of the largest European DIY
+                                retailers
+                            </div>
+                        </div>
+                        <div class="table-row table-row-item">
+                            <div>
+                                No business restrictions in Russia
+                            </div>
+                            <div>
+                                Leroy Marlin
+                                <img loading="lazy" src="img/company-table-icon.svg" alt="img">
+                            </div>
+                            <div>
+                                France
+                                <img loading="lazy" src="img/company-table-icon2.svg" alt="img">
+                            </div>
+                            <div>
+                                Retail
+                            </div>
+                            <div>
+                                One of the largest European DIY
+                                retailers
+                            </div>
+                        </div>
+                        <div class="table-row table-row-item">
+                            <div>
+                                No business restrictions in Russia
+                            </div>
+                            <div>
+                                Leroy Marlin
+                                <img loading="lazy" src="img/company-table-icon.svg" alt="img">
+                            </div>
+                            <div>
+                                France
+                                <img loading="lazy" src="img/company-table-icon2.svg" alt="img">
+                            </div>
+                            <div>
+                                Retail
+                            </div>
+                            <div>
+                                One of the largest European DIY
+                                retailers
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__bottom">
+                        <button class="table__btn btn-all">
+                            Показать все
+                        </button>
+                        <button class="table__btn btn-more">
+                            Еще 20
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </main>
+
+        @include('partials/footer.html')
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
