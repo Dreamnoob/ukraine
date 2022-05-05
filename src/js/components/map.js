@@ -446,11 +446,12 @@ function initMap() {
         const btnZoomOut = document.querySelector('.btn__zoom-out');
         const countryNames = document.querySelectorAll(".map__country-name");
         let deleteNames = true;
+        const maxScale = 25;
 
         // https://github.com/timmywil/panzoom 
 
         const panzoom = Panzoom(elem, {
-            maxScale: 25,
+            maxScale: maxScale,
             minScale: 1,
             contain: 'outside',
         });
@@ -483,7 +484,7 @@ function initMap() {
                 deleteNames = true;
             }
 
-            if (scale.toFixed(1) == 12) {
+            if (scale.toFixed(1) == maxScale) {
                 btnZoomIn.classList.add("disable");
             } else {
                 btnZoomIn.classList.remove("disable");
