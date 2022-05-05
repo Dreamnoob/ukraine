@@ -33,6 +33,7 @@
 		<main>
 			<section class="map">
 				<div class="map__legend">
+					<button class="map__legend-close"></button>
 					<p class="map__legend-tilte">Map legend</p>
 					<ul class="map__legend-list">
 						<li class="map__legend-item map__legend-item--full">Full sanctions</li>
@@ -86,14 +87,25 @@
 						</li>
 					</ul>
 				</div>
-				<div class="map__wrapper" id="svgMapExample">
-					<button class="map__legend-btn"></button>
+				<button class="map__legend-btn"></button>
+				<div class="map__nav">
+					<button class="btn__zoom-in"></button>
+					<button class="btn__zoom-out"></button>
+				</div>
+				<div class="map__wrapper">
+
 				</div>
 			</section>
 		</main>
+
+
+
+
 		@include('partials/footer.html')
 	</div>
 	<script src="js/vendor.js"></script>
+	<!-- <script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script> -->
+	<script src="https://unpkg.com/@panzoom/panzoom@4.4.4/dist/panzoom.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 
